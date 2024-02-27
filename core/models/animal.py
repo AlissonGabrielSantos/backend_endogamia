@@ -1,5 +1,5 @@
 from django.db import models
-from core.models import raca, pelagem
+from core.models import raca, pelagem, lote
 
 
 class Animal(models.Model):
@@ -25,13 +25,14 @@ class Animal(models.Model):
     }
 
     id_animal = models.CharField(max_length=7, primary_key=True)
-    data_nascimento = models.DateField(default="31/12/2000")
+    data_nascimento = models.DateField(default="2000-12-31")
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES)
     raca = models.ForeignKey("Raca", on_delete=models.CASCADE, related_name="raca_animal")
     animal_ativo = models.BooleanField(default=True)
     atividade = models.CharField(max_length=1, choices=ATIVIDADE_CHOICES, default="C")
     categoria = models.CharField(max_length=2, choices=CATEGORIA_CHOICES, default="BE")
     pelagem = models.ForeignKey("Pelagem", on_delete=models.CASCADE, related_name="pelagem_animal")
+    lote = models.ForeignKey("Lote", on_delete=models.CASCADE, related_name="lote_animal", default=1)
 
     def __str__(self):
         return self.id_animal

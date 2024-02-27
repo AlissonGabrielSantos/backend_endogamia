@@ -6,7 +6,7 @@ class Raca(models.Model):
     nome_raca = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.nome_pelagem
+        return self.nome_raca
 
     class Meta:
         verbose_name = "Raça"
