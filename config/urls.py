@@ -3,7 +3,7 @@ from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
 
-from core.views import AnimalViewSet, NascimentoViewSet, PelagemViewSet, RacaViewSet
+from core.views import AnimalViewSet, LoteViewSet, NascimentoViewSet, PelagemViewSet, OrganizacaoViewSet, RacaViewSet
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -18,8 +18,10 @@ from drf_spectacular.views import (
 
 router = DefaultRouter()
 router.register(r"animal", AnimalViewSet)
+router.register(r"lote", LoteViewSet)
 router.register(r"nascimento", NascimentoViewSet)
 router.register(r"pelagem", PelagemViewSet)
+router.register(r"organizacao", OrganizacaoViewSet)
 router.register(r"raca", RacaViewSet)
 
 urlpatterns = [
