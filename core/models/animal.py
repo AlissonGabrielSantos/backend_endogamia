@@ -23,7 +23,7 @@ class Animal(models.Model):
         "NO": "Novilha",
         "VA": "Vaca",
     }
-
+    
     id_animal = models.CharField(max_length=7, primary_key=True)
     data_nascimento = models.DateField(default="2000-12-31")
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES)
