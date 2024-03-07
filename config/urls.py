@@ -31,7 +31,7 @@ urlpatterns = [
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
-        "api/swagger/",
+        " ",
         SpectacularSwaggerView.as_view(url_name="schema"),
         name="swagger-ui",
     ),

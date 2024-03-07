@@ -1,6 +1,7 @@
 from django.db import models
 
 class Organizacao(models.Model):
+    id_organizacao = models.AutoField(primary_key=True)
     nome_organizacao = models.CharField(max_length=100)
     endereco = models.CharField(max_length=100)
     telefone = models.CharField(max_length=15)

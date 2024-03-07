@@ -31,10 +31,9 @@ class Nascimento(models.Model):
         related_name="animal_nascimento",
         primary_key=True,
     )
-    tamanho_nascimento = models.CharField(
-        max_length=1, choices=TAMANHO_CHOICES, default="M"
+    tamanho_nascimento = models.CharField(max_length=1, choices=TAMANHO_CHOICES, default="M"
     )
-    data_nascimento = models.DateField(default="31/12/2000")
+    data_nascimento = models.DateField(default="2000-12-31", null=True)
     situacao_nascimento = models.CharField(
         max_length=1, choices=SITUACAO_CHOICES, default="U"
     )
@@ -42,7 +41,7 @@ class Nascimento(models.Model):
     tipo_parto = models.CharField(max_length=1, choices=TIPO_PARTO_CHOICES, default="N")
 
     def __str__(self):
-        return self.id_nascimento
+        return self.animal.numero_animal
 
     class Meta:
         verbose_name = "Nascimento"
