@@ -3,7 +3,7 @@ from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
 
-from core.views import AnimalViewSet, CategoriaRegistroViewSet, DesmameViewSet, IdentificadorViewSet, LoteViewSet, NascimentoViewSet, PelagemViewSet, OrganizacaoViewSet, RacaViewSet, SubdivisaoViewSet
+from core.views import AnimalViewSet, CategoriaRegistroViewSet, DesmameViewSet, IdentificadorViewSet, LoteViewSet, NascimentoViewSet, PelagemViewSet, OrganizacaoViewSet, RacaViewSet, SubdivisaoViewSet, VacaLoteViewSet
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -27,6 +27,7 @@ router.register(r"pelagem", PelagemViewSet)
 router.register(r"organizacao", OrganizacaoViewSet)
 router.register(r"raca", RacaViewSet)
 router.register(r"subdivisao", SubdivisaoViewSet)
+router.register(r"vaca_lote", VacaLoteViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

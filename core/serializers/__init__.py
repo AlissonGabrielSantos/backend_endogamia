@@ -8,3 +8,4 @@ from .pelagem import PelagemSerializer
 from .organizacao import OrganizacaoSerializer
 from .raca import RacaSerializer
 from .subdivisao import SubdivisaoSerializer
+from .vaca_lote import VacaLoteSerializer

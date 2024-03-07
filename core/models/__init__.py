@@ -8,3 +8,4 @@ from .organizacao import Organizacao
 from .pelagem import Pelagem
 from .raca import Raca
 from .subdivisao import Subdivisao
+from .vaca_lote import VacaLote

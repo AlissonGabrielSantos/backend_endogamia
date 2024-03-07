@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Animal, CategoriaRegistro, Desmame, Identificador, Lote, Nascimento, Organizacao, Pelagem, Raca, Subdivisao
+from .models import Animal, CategoriaRegistro, Desmame, Identificador, Lote, Nascimento, Organizacao, Pelagem, Raca, Subdivisao, VacaLote
 
 #admin.site.register(Animal)
 @admin.register(Animal)
@@ -19,3 +19,4 @@ admin.site.register(Organizacao)
 admin.site.register(Pelagem)
 admin.site.register(Raca)   
 admin.site.register(Subdivisao)
+admin.site.register(VacaLote)

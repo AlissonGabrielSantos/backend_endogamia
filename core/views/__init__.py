@@ -8,3 +8,4 @@ from .pelagem import PelagemViewSet
 from .organizacao import OrganizacaoViewSet
 from .raca import RacaViewSet
 from .subdivisao import SubdivisaoViewSet
+from .vaca_lote import VacaLoteViewSet
