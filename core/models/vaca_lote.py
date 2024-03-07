@@ -9,8 +9,9 @@ class VacaLote(models.Model):
     active = models.BooleanField(default=True, null=False)
 
     def __str__(self):
-        return self.lote.nome_lote + " - " + self.animal.numero_animal
+        return self.lote.nome_lote + " - " + self.vaca.numero_animal
 
     class Meta:
         verbose_name = "VacaLote"
         verbose_name_plural = "VacasLotes"
+        unique_together = ["lote", "vaca"]

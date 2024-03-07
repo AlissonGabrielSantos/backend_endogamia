@@ -12,7 +12,7 @@ class Desmame(models.Model):
         related_name="animal_desmame",
         primary_key=True,
     )
-    data_desmame = models.DateField(default="31/12/2000")
+    data_desmame = models.DateField(default="2021-01-20")
     peso_desmame = models.FloatField(null=True, default=1)
     active = models.BooleanField(default=True, null=False)
 
