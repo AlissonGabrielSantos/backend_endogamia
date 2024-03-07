@@ -5,8 +5,7 @@ class VacaLote(models.Model):
     id_vaca_lote = models.AutoField(primary_key=True)
     lote = models.ForeignKey("Lote", on_delete=models.CASCADE, related_name="lote_vaca", default=1)
     vaca = models.ForeignKey("Animal", on_delete=models.CASCADE, related_name="vaca_lote", default=1)
-    data_cadastro = models.DateField(auto_now_add=True)
-    data_atualizacao = models.DateField(auto_now=True)
+    conf = models.FloatField(null=False, blank=False, default=0.0)
     active = models.BooleanField(default=True, null=False)
 
     def __str__(self):
