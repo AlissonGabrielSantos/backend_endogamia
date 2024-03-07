@@ -14,6 +14,7 @@ class Desmame(models.Model):
     )
     data_desmame = models.DateField(default="31/12/2000")
     peso_desmame = models.FloatField(null=True, default=1)
+    active = models.BooleanField(default=True, null=False)
 
     def __str__(self):
         return self.animal.numero_animal

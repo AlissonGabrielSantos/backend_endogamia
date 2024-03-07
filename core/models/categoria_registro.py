@@ -3,6 +3,7 @@ from django.db import models
 class CategoriaRegistro(models.Model):
     id_categoria_registro = models.AutoField(primary_key=True)
     categoria = models.CharField(max_length=10)
+    active = models.BooleanField(default=True, null=False)
     
     def __str__(self):
         return self.categoria

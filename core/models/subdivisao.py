@@ -8,7 +8,8 @@ class Subdivisao(models.Model):
     data_cadastro = models.DateField(auto_now_add=True)
     data_atualizacao = models.DateField(auto_now=True)
     organizacao = models.ForeignKey("Organizacao", on_delete=models.CASCADE, related_name="organizacao_subdivisao", default=1)
-
+    active = models.BooleanField(default=True, null=False)
+    
     def __str__(self):
         return self.nome_subdivisao
 

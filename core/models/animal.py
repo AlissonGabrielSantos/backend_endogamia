@@ -48,6 +48,8 @@ class Animal(models.Model):
     pelagem = models.ForeignKey("Pelagem", on_delete=models.CASCADE, related_name="pelagem_animal", null=True)
     padrao = models.CharField(max_length=2, choices=PADRAO_CHOICES, default="AN", null=True)
     chifre = models.CharField(max_length=2, choices=CHIFRE_CHOICES, default="CA", null=True)
+    active = models.BooleanField(default=True, null=False)
+    
 
     def __str__(self):
         return self.numero_animal

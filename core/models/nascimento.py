@@ -39,6 +39,7 @@ class Nascimento(models.Model):
     )
     ordem_parto = models.IntegerField(null=True, default=1)
     tipo_parto = models.CharField(max_length=1, choices=TIPO_PARTO_CHOICES, default="N")
+    active = models.BooleanField(default=True, null=False)
 
     def __str__(self):
         return self.animal.numero_animal

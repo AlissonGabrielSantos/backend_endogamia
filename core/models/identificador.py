@@ -23,6 +23,7 @@ class Identificador(models.Model):
     categoria_registro = models.ForeignKey("CategoriaRegistro", on_delete=models.SET_DEFAULT, related_name="categoria_registro_identificador", default=1)
     a12 = models.CharField(max_length=50, null=True)
     serie_paint_cia = models.CharField(max_length=50, null=True)
+    active = models.BooleanField(default=True, null=False)
 
 
     def __str__(self):

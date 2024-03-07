@@ -8,6 +8,7 @@ class Lote(models.Model):
     data_atualizacao = models.DateField(auto_now=True)
     organizacao = models.ForeignKey("Subdivisao", on_delete=models.CASCADE, related_name="subdivisao_lote", default=1)
     vaca = models.ManyToManyField("Animal", related_name="vaca_lote")
+    active = models.BooleanField(default=True, null=False)
 
     def __str__(self):
         return self.nome_lote
