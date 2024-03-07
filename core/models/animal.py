@@ -23,6 +23,21 @@ class Animal(models.Model):
         "NO": "Novilha",
         "VA": "Vaca",
     }
+
+    PADRAO_CHOICES = {
+        "AN": "Anerolado",
+        "CI": "Cruzamento Industrial",
+        "CL": "Cruzamento Leiteiro",
+        "ZE": "Zebuíno",
+    }
+
+    CHIFRE_CHOICES = {
+        "CA": "Calo",
+        "AS": "Aspa",
+        "BT": "Batoque",
+        "BA": "Bananinha",
+    }
+
     id_animal = models.AutoField(primary_key=True)
     numero_animal = models.CharField(max_length=7, default="0000000")
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES, null=True)
@@ -31,6 +46,8 @@ class Animal(models.Model):
     atividade = models.CharField(max_length=1, choices=ATIVIDADE_CHOICES, default="C", null=True)
     categoria = models.CharField(max_length=2, choices=CATEGORIA_CHOICES, default="BE", null=True)
     pelagem = models.ForeignKey("Pelagem", on_delete=models.CASCADE, related_name="pelagem_animal", null=True)
+    padrao = models.CharField(max_length=2, choices=PADRAO_CHOICES, default="AN", null=True)
+    chifre = models.CharField(max_length=2, choices=CHIFRE_CHOICES, default="CA", null=True)
 
     def __str__(self):
         return self.numero_animal
