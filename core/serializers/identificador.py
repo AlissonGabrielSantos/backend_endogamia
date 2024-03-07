@@ -6,3 +6,4 @@ class IdentificadorSerializer(ModelSerializer):
     class Meta:
         model = Identificador
         fields = "__all__"
+        depth = 1

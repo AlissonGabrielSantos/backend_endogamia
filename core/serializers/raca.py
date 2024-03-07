@@ -6,3 +6,4 @@ class RacaSerializer(ModelSerializer):
     class Meta:
         model = Raca
         fields = "__all__"
+        depth = 1

@@ -6,3 +6,4 @@ class AnimalSerializer(ModelSerializer):
     class Meta:
         model = Animal
         fields = "__all__"
+        depth = 1

@@ -6,3 +6,4 @@ class NascimentoSerializer(ModelSerializer):
     class Meta:
         model = Nascimento
         fields = "__all__"
+        depth = 1

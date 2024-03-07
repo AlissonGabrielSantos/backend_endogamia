@@ -6,3 +6,4 @@ class DesmameSerializer(ModelSerializer):
     class Meta:
         model = Desmame
         fields = "__all__"
+        depth = 1

@@ -6,3 +6,4 @@ class OrganizacaoSerializer(ModelSerializer):
     class Meta:
         model = Organizacao
         fields = "__all__"
+        depth = 1

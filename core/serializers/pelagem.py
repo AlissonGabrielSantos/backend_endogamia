@@ -6,3 +6,4 @@ class PelagemSerializer(ModelSerializer):
     class Meta:
         model = Pelagem
         fields = "__all__"
+        depth = 1

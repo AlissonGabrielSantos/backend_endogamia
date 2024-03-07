@@ -6,3 +6,4 @@ class SubdivisaoSerializer(ModelSerializer):
     class Meta:
         model = Subdivisao
         fields = "__all__"
+        depth = 1

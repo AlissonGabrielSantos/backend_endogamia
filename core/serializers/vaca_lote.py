@@ -6,4 +6,4 @@ class VacaLoteSerializer(ModelSerializer):
     class Meta:
         model = VacaLote
         fields = "__all__"
-        #depth = 1
+        depth = 1
