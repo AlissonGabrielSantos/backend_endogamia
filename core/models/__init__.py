@@ -1,6 +1,7 @@
 from .animal import Animal
 from .categoria_registro import CategoriaRegistro
 from .desmame import Desmame
+from .identificador import Identificador
 from .lote import Lote
 from .nascimento import Nascimento
 from .organizacao import Organizacao
