@@ -9,11 +9,12 @@ class Nascimento(models.Model):
         "G": "Grande",
     }
 
-    SITUACAO_CHOICES = {
+    SITUACAO_NASCIMENTO_CHOICES = {
         "U": "Único",
         "M": "Múltiplo",
         "D": "Defeituoso Único",
         "N": "Defeituoso Múltiplo",
+        "L": "Lote de Touros",
     }
 
     TIPO_PARTO_CHOICES = {
@@ -35,7 +36,7 @@ class Nascimento(models.Model):
     )
     data_nascimento = models.DateField(default="2000-12-31", null=True)
     situacao_nascimento = models.CharField(
-        max_length=1, choices=SITUACAO_CHOICES, default="U"
+        max_length=1, choices=SITUACAO_NASCIMENTO_CHOICES, default="U"
     )
     ordem_parto = models.IntegerField(null=True, default=1)
     tipo_parto = models.CharField(max_length=1, choices=TIPO_PARTO_CHOICES, default="N")

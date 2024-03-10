@@ -6,6 +6,7 @@ class Organizacao(models.Model):
     endereco = models.CharField(max_length=100)
     telefone = models.CharField(max_length=15)
     email = models.EmailField(max_length=100)
+    senha = models.CharField(max_length=64)
     cnpj = models.CharField(max_length=20)
     data_cadastro = models.DateField(auto_now_add=True)
     data_atualizacao = models.DateField(auto_now=True)
